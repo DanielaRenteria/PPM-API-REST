@@ -47,7 +47,7 @@ public class MembersREST {
     }
 
     @PutMapping
-    public ResponseEntity<Members> updateTechnologies(@RequestBody Members members){
+    public ResponseEntity<Members> updateMembers(@RequestBody Members members){
         Optional<Members> optionalMembers= membersDAO.findById(members.getId());
         if(optionalMembers.isPresent()) {
             Members updateMembers = optionalMembers.get();
