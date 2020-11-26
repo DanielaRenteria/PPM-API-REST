@@ -52,6 +52,9 @@ public class MembersREST {
         if(optionalMembers.isPresent()) {
             Members updateMembers = optionalMembers.get();
             updateMembers.setName(members.getName());
+            updateMembers.setLastName(members.getLastName());
+            updateMembers.setRole(members.getRole());
+            updateMembers.setActive(members.getActive());
             membersDAO.save(updateMembers);
             return ResponseEntity.ok(updateMembers);
         }else {

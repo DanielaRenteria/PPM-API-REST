@@ -15,15 +15,33 @@ public class Members {
     @Column(name = "name", nullable = false, length = 30)
     private String name;
 
-    @Column(name = "Description", nullable = false, length = 50)
-    private String description;
+    @Column(name = "lastName", nullable = false, length = 50)
+    private String lastName;
+
+    @Column(name = "role", nullable = false)
+    private String role;
+
+    @Column(name = "active", columnDefinition = "int default 1")
+    private Integer active;
+
+    public Integer getActive() {
+        return active;
+    }
+
+    public void setActive(Integer active) {
+        this.active = active;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -34,12 +52,12 @@ public class Members {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
 
